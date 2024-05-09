@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh mục sản phẩm - WatchStore</title>
+    <script src="/Js/jquery-3.3.1.js"></script>
+    <script src="/Js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/Css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Css/style.css">
+    <link rel="stylesheet" href="/Css/home.css">
+ <link rel="stylesheet" href="/Css/category.css">
+ <link rel="stylesheet" href="/Css/all.min.css">
+</head>
+<body>
+    <!-- header -->
+    <header id="header">
+        <!-- header top -->
+        <div class="header__top">
+            <div class="container">
+                <section class="row flex">
+                    <div class="col-lg-5 col-md-0 col-sm-0 heade__top-left">
+                        <span>WatchStore - Thế giới đồng hồ</span>
+                    </div>
+
+                    <nav class="col-lg-7 col-md-0 col-sm-0 header__top-right">
+                        <ul class="header__top-list">
+                            <li class="header__top-item">
+                                <a href="#" class="header__top-link">
+
+                                Hỏi đáp</a>
+                            </li>
+                            <li class="header__top-item">
+                                <a href="#" class="header__top-link">Hướng dẫn</a>
+                            </li>
+                            <li class="header__top-item">
+                                <a href="#" class="header__top-link" data-toggle="modal" data-target="#myModal">Đăng ký</a>
+                            </li>
+                            <li class="header__top-item">
+                                <a href="#" class="header__top-link" data-toggle="modal" data-target="#myModal2">Đăng nhập</a>
+                            </li>
+                        </ul>
+                        <div class="modal" id="myModal" >
+                            <div class="modal-dialog">
+                              <div class="modal-content" style="width: 550px; height: 700px;">
+                      
+                        <!-- --------------------------------------Modal Đăng ký  ------------------------------------>
+                                <!-- Modal Header -->
+                                <div class="modal-header modal-css">
+                                    <h2 class="modal-title">Đăng ký</h2>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                  </div>
+          
+                                  <!-- Modal body -->
+                                  <div class="modal-body modal-css">
+                                    <form action="">
+                                      <div class="form-group">
+                                        <label for="" style="font-size: medium;">Họ và tên:</label>
+                                        <input type="" class="form-control" id="" placeholder="Họ và tên" name="" style="height: 50px;font-size: medium;">
+          
+                                        <label for="" style="font-size: medium;">Số điện thoại</label>
+                                        <input type="" class="form-control" id="" placeholder="Số điện thoai" name=""style=" height: 50px;font-size: medium;">
+                                        <label for=""style="font-size: medium;">ngày sinh::</label>
+                                        <input type="date" class="form-control datee" style="height: 50px;font-size: medium;">
+                                        <label for=""style="font-size: medium;">Email:</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Enter email"
+                                          name="email"style="height: 50px;font-size: medium;">
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="pwd" style="font-size: medium;">Password:</label>
+                                          <div class="password-input">
+                                              <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" style="height: 50px;font-size: medium;">
+                                              <span id="togglePassword" class="toggle-password">
+                                                  <i class="fas fa-eye"></i>
+                                              </span>
+                                          </div>
+                                      </div>
+                                      
+                                      <div class="form-group form-check">
+                                        <label class="form-check-label" style="font-size: medium;">
+                                          <input class="form-check-input" type="checkbox" name="" style="height: 50;">  Đồng ý với các điều
+                                          khoản</label>
+                                      </div>
+          
+                                    </form>
+          
+                                  </div>
+          
+                                  <!-- Modal footer -->
+                                  <div class="modal-footer modal-css">
+                                    <button type="button" class="btn btn-info m-auto" data-dismiss="modal" style="width: 100px; height: 100px;font-size: medium;" >Đăng ký</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                      <!-------------------------------- Kết thúc model DK ---------------------------->
+  
+  
+                      <!-- -------------------------Modal Đăng nhập ------------------------------------------>
+  
+                      <div class="modal" id="myModal2">
+                          <div class="modal-dialog">
+                              <div class="modal-content" style="width: 550px; height: 400px;">
+                                  <div class="modal-header modal-css">
+                                      <h2 class="modal-title">Đăng nhập</h2>
+                                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                  </div>
+                                  <div class="modal-body modal-css">
+                                      <form action="">
+                                          <div class="form-group">
+                                              <label for="email" style="font-size: medium;">Email:</label>
+                                              <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" style="height: 50px; font-size: medium;">
+                                          </div>
+                                          <div class="form-group">
+                                              <label for="pwd" style="font-size: medium;">Password:</label>
+                                              <div class="password-input">
+                                                  <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" style="height: 50px; font-size: medium;">
+                                                  <span class="toggle-password" onclick="togglePasswordVisibility()">
+                                                      <i id="eyeIcon" class="fas fa-eye"></i>
+                                                  </span>
+                                              </div>
+                                          </div>
+                                      </form>
+                                  </div>
+                                  <div class="modal-footer modal-css">
+                                      <button type="button" class="btn btn-info m-auto" data-dismiss="modal" style="width: 100px; height: 100px; font-size: medium;">Đăng nhập</button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      
+          <!-- ------------------------- Két thúc Modal Đăng nhập ------------------------------------------>
+                    </nav>
+                </section>
+            </div>
+        </div>
+        <!--end header top -->
+
+        <!-- header bottom -->
+        <div class="header__bottom">
+            <div class="container">
+                <section class="row">
+                    <div class="col-lg-3 col-md-4 col-sm-12 header__logo">
+                        <h1 class="header__heading">
+                            <a href="/Html/index.html" class="header__logo-link">
+                                <img src="/Imgs/images1/logo1.png" alt="Logo" class="header__logo-img">
+                            </a>
+                        </h1>
+                    </div>
+
+                    <div class="col-lg-6 col-md-7 col-sm-0 header__search">
+                        <select name="" id="categorySelect" class="header__search-select">
+                            <option value="0">All</option>
+                            <option value="1">Apple Watch</option>
+                            <option value="2">Đồng hồ cơ</option>
+                            <option value="3">Đồng hồ Analog</option>
+                            
+                        </select>
+                        <input type="text" id ="productNameSelect"class="header__search-input" placeholder="Tìm kiếm tại đây...">
+                        <button class="header__search-btn">
+                            <div class="header__search-icon-wrap">
+                                <i class="fas fa-search header__search-icon"></i>
+                            </div>
+                        </button>
+                    </div>
+
+                    <div class="col-lg-2 col-md-0 col-sm-0 header__call">
+                        <div class="header__call-icon-wrap">
+                            <i class="fas fa-phone-alt header__call-icon"></i>  
+                        </div>
+                        <div class="header__call-info">
+                            <div class="header__call-text">
+                                Gọi điện tư vấn
+                            </div>
+                            <div class="header__call-number">
+                                038.892.3xxx
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="/Html/cart.html" class="col-lg-1 col-md-1 col-sm-0 header__cart">
+                        <div class="header__cart-icon-wrap">
+                            <span class="header__notice">4</span>
+                            <i class="fas fa-shopping-cart header__nav-cart-icon"></i>
+                        </div>
+                    </a>
+                </section>
+            </div>   
+        </div>
+        <!--end header bottom -->
+
+        <!-- header nav -->
+        <div class="header__nav">
+            <div class="container">
+                <section class="row">
+                    <div class="header__nav-menu-wrap col-lg-3 col-md-0 col-sm-0">
+                        <i class="fas fa-bars header__nav-menu-icon"></i>
+                        <div class="header__nav-menu-title">Danh mục sản phẩm</div>
+                    </div>
+
+                    <div class="header__nav col-lg-9 col-md-0 col-sm-0">
+                        <ul class="header__nav-list">
+                            <li class="header__nav-item">
+                                <a href="#" class="header__nav-link">Apple Watch</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="#" class="header__nav-link">Đồng Hồ Cơ</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="#" class="header__nav-link">Đồng Hồ Analog</a>
+                            </li>                          
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </header>
+    <!-- end header -->
+
+    <!-- category 1: Sách trong nước-->
+    <section id ='category1' class="product__love">
+        <div class="container">
+            <div class="row bg-white">
+                <div class="col-lg-12 col-md-12 col-sm-12 product__love-title">
+                    <h2 class="product__love-heading upper">
+                        Apple Watch
+                    </h2>
+                </div>
+            </div>
+            <div class="row bg-white">
+                <div class="product__panel-item col-lg-2 col-md-3 col-sm-6">
+                    <div class="product__panel-img-wrap">
+                        <img src="/Imgs/images1/product/apple-watch-series-3.jpg" alt="" class="product__panel-img">
+                    </div>
+                    <h3 class="product__panel-heading">
+                        <a href="/Imgs/apple1.html" class="product__panel-link">Apple Watch S3 GPS 38mm</a>
+                    </h3>
+                    <div class="product__panel-rate-wrap">
+                        <i class="fas fa-star product__panel-rate"></i>
+                        <i class="fas fa-star product__panel-rate"></i>
+                        <i class="fas fa-star product__panel-rate"></i>
+                        <i class="fas fa-star product__panel-rate"></i>
+                        <i class="fas fa-star product__panel-rate"></i>
+                    </div>
+
+                    <div class="product__panel-price">
+                        <!--<span class="product__panel-price-old product__panel-price-old-hide">
+                            80.000đ
+                        </span>-->
+                        <span class="product__panel-price-old">
+                            5.000.000đ
+                        </span>
+                        <span class="product__panel-price-current">
+                            4.990.000đ
+                        </span>
+                    </div>  
+                    <div class="product__panel-price-sale-off">
+                        -16%
+                    </div>
+                    <div class="bestselling__product-btn-wrap">
+                        <a href="/Html/apple1.html"><button class="bestselling__product-btn">Xem hàng</button></a>
+                    </div>
+                </div>
+
+                <div class="product__panel-item col-lg-2 col-md-3 col-sm-6">
+                    <div class="product__panel-img-wrap">
+                        <img src="/Imgs/images1/product/applewatch-s5.jpg" alt="" class="product__panel-img">
+                    </div>
+                    <h3 class="product__panel-heading">
+                        <a href="/Html/apple2.html" class="product__panel-link">Apple Watch S5 LTE 40mm</a>
+                    </h3>
+                    <div class="product__panel-rate-wrap">
+                        <i class="fas fa-star product__panel-rate"></i>
+                        <i class="fas fa-star product__panel-rate"></i>
+                        <i class="fas fa-star product__panel-rate"></i>
+                        <i class="fas fa-star product__panel-rate"></i>
+                        <i class="fas fa-star product__panel-rate"></i>
+                    </div>
+
+                    <div class="product__panel-price">
+                        <span class="product__panel-price-old ">
+                            17.990.000đ
+                        </span>
+                        <span class="product__panel-price-current">
+                            11.990.000đ
+                        </span>
+                       
+                    </div> 
+                    <div class="product__panel-price-sale-off">
+                        33%
+                    </div>
+                    <div class="bestselling__product-btn-wrap">
+                        <a href="/Html/apple2.html"><button class="bestselling__product-btn">Xem hàng</button></a>
+                    </div>
+                </div>
+
+                <div class="product__panel-item col-lg-2 col-md-3 col-sm-6">
+                    <div class="product__panel-img-wrap">
+                        <img src="/Imgs/images1/product/apple-watch-s7.jpg" alt="" class="product__panel-img">
+                    </div>
+                    <h3 class="product__panel-heading">
+                        <a href="/Html/apple3.html" class="product__panel-link">Apple Watch Series 7 LTE 41mm</a>
+                    </h3>
+                    <div class="product__panel-rate-wrap">
+                        <i class="fas fa-star product__panel-rate"></i>
+                        <i class="fas fa-star product__panel-rate"></i>
+                        <i class="fas fa-star product__panel-rate"></i>
+                        <i class="fas fa-star product__panel-rate"></i>
+                        <i class="fas fa-star product__panel-rate"></i>
+                    </div>
+
+                    <div class="product__panel-price">
+                       
+                        <span class="product__panel-price-current">
+                            14.990.000đ
+                        </span>
+                    </div>
+                    <div class="bestselling__product-btn-wrap">
+                        <a href="/Html/apple3.html"><button class="bestselling__product-btn">Xem hàng</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- category 2: Sách nước ngoài-->
+    <section  id ='category2' class="product__love">
+        <div class="container">
+            <div class="row bg-white">
+                <div class="col-lg-12 col-md-12 col-sm-12 product__love-title">
+                    <h2 class="product__love-heading upper">
+                        Đồng Hồ Cơ
+                    </h2>
+                </div>
+            </div>
+            <div class="row bg-white">
+                <div class="product__panel-item col-lg-2 col-md-3 col-sm-6">
+                    <div class="product__panel-img-wrap">
+                        <img src="/Imgs/images1/product//cơ1.jpg" alt="" class="product__panel-img" >
+                    </div>
+                    <h3 class="product__panel-heading">
+                        <a href="/Html/co1.html" class="product__panel-link">Đồng hồ Nam Frederique Constant FC-310MS5B6</a>
+                    </h3>
+                    <div class="product__panel-rate-wrap">
+                        <i class="fas fa-star product__panel-rate"></i>
+                        <i class="fas fa-star product__panel-rate"></i>
+                        <i class="fas fa-star product__panel-rate"></i>
+                        <i class="fas fa-star product__panel-rate"></i>
+                        <i class="fas fa-star product__panel-rate"></i>
+                    </div>
+
+                    <div class="product__panel-price">
+                        <span class="product__panel-price-old ">
+                            36.180.000₫
+                        </span>
+                        <span class="product__panel-price-current">
+                            28.944.000đ
+                        </span>
+                    </div> 
+                    <div class="product__panel-price-sale-off">
+                        20%
+                    </div>
+                    <div class="bestselling__product-btn-wrap">
+                        <a href="/Html/co1.html"><button class="bestselling__product-btn">Xem hàng</button></a>
+                    </div>
+                </div>
+
+                <div class="product__panel-item col-lg-2 col-md-3 col-sm-6">
+                    <div class="product__panel-img-wrap">
+                        <img src="/Imgs/images1/product//co2.jpg" alt="" class="product__panel-img" >
+                    </div>
+                    <h3 class="product__panel-heading">
+                        <a href="/Html/co2.html" class="product__panel-link">Đồng hồ Nữ Frederique Constant FC-310VD2NH2B </a>
+                    </h3>
+                    <div class="product__panel-rate-wrap">
+                        <i class="fas fa-star product__panel-rate"></i>
+                        <i class="fas fa-star product__panel-rate"></i>
+                        <i class="fas fa-star product__panel-rate"></i>
+                        <i class="fas fa-star product__panel-rate"></i>
+                        <i class="fas fa-star product__panel-rate"></i>
+                    </div>
+
+                    <div class="product__panel-price">
+                        <span class="product__panel-price-old ">
+                            60.210.000₫
+                        </span>
+                        <span class="product__panel-price-current">
+                            48.168.000đ
+                        </span>
+                    </div> 
+                    <div class="product__panel-price-sale-off">
+                        20%
+                    </div>
+                    <div class="bestselling__product-btn-wrap">
+                        <a href="/Html/co2.html"><button class="bestselling__product-btn">Xem hàng</button></a>
+                    </div>
+                </div>
+
+                <div class="product__panel-item col-lg-2 col-md-3 col-sm-6">
+                    <div class="product__panel-img-wrap">
+                        <img src="/Imgs/images1/product//co3.jpg" alt="" class="product__panel-img" >
+                    </div>
+                    <h3 class="product__panel-heading">
+                        <a href="/Html/co3.html" class="product__panel-link">Đồng hồ Nam Frederique Constant FC-312N4S6 </a>
+                    </h3>
+                    <div class="product__panel-rate-wrap">
+                        <i class="fas fa-star product__panel-rate"></i>
+                        <i class="fas fa-star product__panel-rate"></i>
+                        <i class="fas fa-star product__panel-rate"></i>
+                        <i class="fas fa-star product__panel-rate"></i>
+                        <i class="fas fa-star product__panel-rate"></i>
+                    </div>
+
+                    <div class="product__panel-price">
+                        <span class="product__panel-price-old ">
+                            52.000.000đ
+                        </span>
+                        <span class="product__panel-price-current">
+                            41.600.000đ
+                        </span>
+                    </div> 
+                    <div class="product__panel-price-sale-off">
+                        20%
+                    </div>
+                    <div class="bestselling__product-btn-wrap">
+                        <a href="/Html/co3.html"><button class="bestselling__product-btn">Xem hàng</button></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- category 3: Manga - Comics-->
+    <section  id ='category3'class="product__love">
+        <div class="container">
+            <div class="row bg-white">
+                <div class="col-lg-12 col-md-12 col-sm-12 product__love-title">
+                    <h2 class="product__love-heading upper">
+                        Đồng Hồ Analog
+                    </h2>
+                </div>
+            </div>
+            <div class="row bg-white">
+                
+                <div class="product__panel-item col-lg-2 col-md-3 col-sm-6">
+                    <div class="product__panel-img-wrap">
+                        <img src="/Imgs/images1/product/wishdos.jpg" alt="" class="product__panel-img">
+                    </div>
+                    <h3 class="product__panel-heading">
+                        <a href="/Html/analog1.html" class="product__panel-link">Đồng hồ WISHDOIT </a>
+                    </h3>
+                    <div class="product__panel-rate-wrap">
+                        <i class="fas fa-star product__panel-rate"></i>
+                        <i class="fas fa-star product__panel-rate"></i>
+                        <i class="fas fa-star product__panel-rate"></i>
+                        <i class="fas fa-star product__panel-rate"></i>
+                        <i class="fas fa-star product__panel-rate"></i>
+                    </div>
+
+                    <div class="product__panel-price">
+                        <span class="product__panel-price-old ">
+                            710.000đ
+                        </span>
+                        <span class="product__panel-price-current">
+                            459.500đ
+                        </span>
+                    </div> 
+                    <div class="product__panel-price-sale-off">
+                        35%
+                    </div>
+                    <div class="bestselling__product-btn-wrap">
+                        <a href="analog1.html"><button class="bestselling__product-btn">Xem hàng</button></a>
+                    </div>
+                </div>
+                
+                <div class="product__panel-item col-lg-2 col-md-3 col-sm-6">
+                    <div class="product__panel-img-wrap">
+                        <img src="/Imgs/images1/product//analog2.jpg" alt="" class="product__panel-img" >
+                    </div>
+                    <h3 class="product__panel-heading">
+                        <a href="/Html/analog2.html" class="product__panel-link">Citizen AR1113-12A - Đồng hồ nam</a>
+                    </h3>
+                    <div class="product__panel-rate-wrap">
+                        <i class="fas fa-star product__panel-rate"></i>
+                        <i class="fas fa-star product__panel-rate"></i>
+                        <i class="fas fa-star product__panel-rate"></i>
+                        <i class="fas fa-star product__panel-rate"></i>
+                        <i class="fas fa-star product__panel-rate"></i>
+                    </div>
+
+                    <div class="product__panel-price">
+                        
+                        <span class="product__panel-price-current">
+                            8.530.000đ
+                        </span>
+                    </div> 
+                    <div class="bestselling__product-btn-wrap">
+                        <a href="/Html/analog2.html"><button class="bestselling__product-btn">Xem hàng</button></a>
+                    </div>
+                </div>
+
+                <div class="product__panel-item col-lg-2 col-md-3 col-sm-6">
+                    <div class="product__panel-img-wrap">
+                        <img src="/Imgs/images1/product/analog3.jpg" alt="" class="product__panel-img" >
+                    </div>
+                    <h3 class="product__panel-heading">
+                        <a href="#" class="product__panel-link">Citizen AU1060-51E - Đồng Hồ Nam
+                        </a>
+                    </h3>
+                    <div class="product__panel-rate-wrap">
+                        <i class="fas fa-star product__panel-rate"></i>
+                        <i class="fas fa-star product__panel-rate"></i>
+                        <i class="fas fa-star product__panel-rate"></i>
+                        <i class="fas fa-star product__panel-rate"></i>
+                        <i class="fas fa-star product__panel-rate"></i>
+                    </div>
+
+                    <div class="product__panel-price">
+                        
+                        <span class="product__panel-price-current">
+                            5.500.000đ
+                        </span>
+                    </div> 
+                    <div class="bestselling__product-btn-wrap">
+                        <a href="#"><button class="bestselling__product-btn">Xem hàng</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- footer -->
+     <footer>
+        <section class="footer__top">
+            <div class="container">
+                <div class="row">
+                    <article class="footer__top-intro col-lg-5 col-md-4 col-sm-6">
+                        <h4 class="footer__top-intro-heading">
+                            Về chúng tôi
+                        </h4>
+                        <div class="footer__top-intro-content">
+                            WatchStore là cửa hàng luôn cung cấp cho các bạn đồng hồ chất lượng, uy tín 
+                            khắp cả nước.Chúng tôi sẽ liên tục cập 
+                            nhật những đồng hồ mới nhất, đẹp nhất, chất lượng nhất đến cho các bạn! <br> <br>
+                            Điện thoại:  038.892.3xxx <br>
+                            Email: watchstoreDD@gmail.com <br>
+                            Zalo:   038.892.3xxx <br>
+                        </div>
+                    </article>
+
+                    <article class="footer__top-policy col-lg-3 col-md-4 col-sm-6">
+                        <h4 class="footer__top-policy-heading">
+                            Chính sách mua hàng
+                        </h4>
+
+                        <ul class="footer__top-policy-list">
+                            <li class="footer__top-policy-item">
+                                <a href="#" class="footer__top-policy-link">Hình thức đặt hàng</a>
+                            </li>
+                            <li class="footer__top-policy-item">
+                                <a href="#" class="footer__top-policy-link">Hình thức thanh toán</a>
+                            </li>
+                            <li class="footer__top-policy-item">
+                                <a href="#" class="footer__top-policy-link">Phương thức vận chuyển</a>
+                            </li>
+                            <li class="footer__top-policy-item">
+                                <a href="#" class="footer__top-policy-link">Chính sách đổi trả</a>
+                            </li>
+                            <li class="footer__top-policy-item">
+                                <a href="#" class="footer__top-policy-link">Hướng dẫn sử dụng</a>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="footer__top-contact-wrap col-lg-4 col-md-4 col-sm-6">
+                        <h4 class="footer__top-contact-heading">
+                            Hotline liên hệ
+                        </h4>
+
+                        <div class="footer__top-contact">
+                            <div class="footer__top-contact-icon">
+                                <img src="/Imgs/images/phone_top.png" class="footer__top-contact-img">
+                            </div>
+
+                            <div class="footer__top-contact-phone-wrap">
+                                <div class="footer__top-contact-phone">
+                                    038.892.3xxx
+                                </div>
+                                <div class="footer__top-contact-des">
+                                    (Giải đáp thắc mắc 24/24)
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <h4 class="footer__top-contact-heading">
+                            Kết nối với chúng tôi
+                        </h4>
+
+                        <div class="footer__top-contact-social">
+                            <a href="#" class="footer__top-contact-social-link">
+                                <img src="/Imgs/images/facebook.png">
+                            </a>
+                            <a href="#" class="footer__top-contact-social-link">
+                                <img src="/Imgs/images/youtube.png">
+                            </a>
+                            <a href="#" class="footer__top-contact-social-link">
+                                <img src="/Imgs/images/tiktok.png">
+                            </a>
+                            <a href="#" class="footer__top-contact-social-link">
+                                <img src="/Imgs/images/zalo.png">
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="footer__bottom">
+            <div class="container">
+                <div class="row">
+                    <span class="footer__bottom-content">@Bản quyền thuộc về Nhóm 2 | Thiết kế bởi team 2 </span>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- end footer -->
+    <!-- scroll to top -->
+  <!-- score-top-->
+
+<button onclick="topFunction()" id="myBtn-scroll" title="Go to top"><i class="fas fa-chevron-up"></i></i></button>
+    <!--  -->
+    
+    <script src="/Js/Js1.js"></script>
+</body>
+</html>
